@@ -70,7 +70,7 @@ a {
 
 .left .logo {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: 52px;
+    font-size: 4rem;
     color: var(--text-color);
     text-decoration: none;
 }
@@ -97,7 +97,7 @@ a {
 .nav-link .first {
     display: inline-block;
     color: var(--text-color);
-    opacity: 0.3;                     /* inactive opacity */
+    opacity: 0.5;                     /* inactive opacity */
     transform: translateY(0);
     transition: transform 0.7s cubic-bezier(.16,1,.3,1),
     opacity 0.3s ease;
@@ -134,6 +134,58 @@ a {
     display: none;                     /* no sliding needed */
 }
 
+/*HERO*/
+
+.hero {
+    display: flow;
+    align-items: center;
+    padding: 0 50px;
+    margin: 150px 0;
+}
+
+.hero .text{
+}
+
+.hero .text h1 {
+    font-size: 3.5rem;
+}
+
+.hero .headshot{
+}
+
+.hero .headshot img {
+    width: 400px;
+    border-radius: 50%;
+}
+
+/*SKILLS*/
+
+.skills{
+    padding: 0 50px;
+    margin-bottom: 100px;
+}
+
+.skills h2 {
+    text-align: center;
+    font-size: 3rem;
+}
+
+.skills .cells{
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 2rem;
+    flex-wrap: wrap;
+}
+
+.skills .cells .cell{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px 25px;
+    border: 1px solid var(--text-color);
+    border-radius: 10px;
+}
 
 footer{
     display: flex;
@@ -143,9 +195,149 @@ footer{
     font-size: 25px;
 }
 
+/* =========================================
+   HAMBURGER MENU LOGIC
+   ========================================= */
+
+/* 1. Hide Checkbox Globally */
+#menu-btn {
+    display: none;
+}
+
+/* 2. Hide Hamburger Icon on Desktop */
+.menu-icon {
+    display: none;
+}
+
+/* 3. Desktop Nav Links Style (Default) */
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+/* =========================================
+   MOBILE / TABLET VIEW (FULL SCREEN MENU)
+   ========================================= */
+@media (max-width: 1024px) {
+
+    /* Show Hamburger Icon */
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        padding: 10px;
+        z-index: 200; /* Ensure icon stays on top of the full-screen menu */
+        position: relative;
+    }
+
+    /* Style the Hamburger Lines */
+    .navicon {
+        background: var(--text-color);
+        display: block;
+        height: 2px;
+        width: 24px;
+        position: relative;
+        transition: background .2s ease-out;
+    }
+
+    .navicon:before, .navicon:after {
+        background: var(--text-color);
+        content: '';
+        display: block;
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        transition: all .2s ease-out;
+    }
+
+    .navicon:before { top: 8px; }
+    .navicon:after { top: -8px; }
+
+    /* -----------------------------------
+       FULL SCREEN MENU CONTAINER
+       ----------------------------------- */
+    .nav-links {
+        position: fixed;        /* Fixed to the viewport, not the parent */
+        top: 0;
+        left: 0;
+        width: 100vw;           /* Full viewport width */
+        height: 100vh;          /* Full viewport height */
+        background-color: #ffffff;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center; /* Center links vertically */
+        align-items: center;
+        gap: 2rem;              /* Space between links */
+
+        /* Hide it by shifting it off-screen or using opacity/visibility */
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease-in-out;
+        z-index: 150;           /* Below the hamburger icon (200) but above content */
+    }
+
+    /* Link Styles inside Mobile Menu */
+    .nav-links .nav-link {
+        width: auto;
+        text-align: center;
+        border: none;           /* Removed border for cleaner full-screen look */
+        font-size: 3rem;        /* Make text bigger for full screen impact */
+        height: auto;           /* Reset fixed height from desktop styles */
+    }
+
+    /* FORCE BLACK TEXT */
+    .nav-links .nav-link .first,
+    .nav-links .nav-link .second {
+        color: #000000 !important;
+        position: static;
+        opacity: 1;
+        transform: none;
+    }
+
+    .nav-links .nav-link .second {
+        display: none;
+    }
+
+    /* -----------------------------------
+       OPEN STATE (:checked)
+       ----------------------------------- */
+
+    /* Reveal Menu */
+    #menu-btn:checked ~ .nav-links {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Change Hamburger Color to Black so it's visible on white background */
+    #menu-btn:checked ~ .menu-icon .navicon {
+        background: transparent;
+    }
+
+    #menu-btn:checked ~ .menu-icon .navicon:before {
+        transform: rotate(-45deg);
+        top: 0;
+        background: #000; /* Black X */
+    }
+
+    #menu-btn:checked ~ .menu-icon .navicon:after {
+        transform: rotate(45deg);
+        top: 0;
+        background: #000; /* Black X */
+    }
+}
+
 @media (max-width: 500px) {
-    footer{
+
+    .skills {
         padding: 1rem;
+    }
+
+    .skills .cells .cell span{
+        font-size: 1rem;
+    }
+
+    footer{
+        padding: 0.5rem;
     }
 }
 

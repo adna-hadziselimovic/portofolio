@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bs">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport"
@@ -10,33 +10,71 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Document</title>
 </head>
+
 <body>
+
 <!--NAVBAR-->
 <nav class="navbar">
     <div class="left">
         <a href="/" class="logo">Adna</a>
     </div>
 
-    <div class="right">
+    <!-- Hamburger Input (Hidden Checkbox) -->
+    <input class="menu-btn" type="checkbox" id="menu-btn" />
+
+    <!-- Hamburger Icon (Visible on Mobile) -->
+    <label class="menu-icon" for="menu-btn">
+        <span class="navicon"></span>
+    </label>
+
+    <!-- Navigation Links -->
+    <div class="nav-links">
         <a class="nav-link" href="#skills"><span class="first">VJEŠTINE</span><span class="second">VJEŠTINE</span></a>
         <a class="nav-link" href="#projects"><span class="first">PROJEKTI</span><span class="second">PROJEKTI</span></a>
         <a class="nav-link" href="#gallery"><span class="first">GALERIJA</span><span class="second">GALERIJA</span></a>
+        <a class="nav-link" href="#blog"><span class="first">BLOG</span><span class="second">BLOG</span></a>
         <a class="nav-link" href="#contact"><span class="first">KONTAKT</span><span class="second">KONTAKT</span></a>
     </div>
 </nav>
 
-
 <main>
     <!--HERO-->
-    <section id="home">
-
+    <section class="hero">
+        <div class="headshot">
+            <img src="img/headshot.jpg" alt="headshot">
+        </div>
+        <div class="text">
+            <h1>zdravo</h1>
+        </div>
     </section>
+
     <!--O MENI-->
     <section id="about">
 
     </section>
     <!--VJESTINE-->
-    <section id="skills">
+    <section class="skills">
+        <h2>skills</h2>
+
+
+        <div class="cells">
+            <div class="cell">
+                <span>HTML</span>
+            </div>
+            <div class="cell">
+                <span>CSS</span>
+            </div>
+            <div class="cell">
+                <span>C++</span>
+            </div>
+            <div class="cell">
+                <span>Python</span>
+            </div>
+            <div class="cell">
+                <span>SQL</span>
+            </div>
+        </div>
+
 
     </section>
     <!--PROJEKTI-->
@@ -47,7 +85,12 @@
     <section id="gallery">
 
     </section>
-    <s
+
+    <!--BLOG-->
+    <section id="blog">
+
+    </section>
+
     <!--KONTAKT-->
     <section id="contact">
 
