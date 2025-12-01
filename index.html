@@ -8,7 +8,6 @@
     <title>Portofolio</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <title>Document</title>
 </head>
 
 <body>
@@ -16,7 +15,7 @@
 <!--NAVBAR-->
 <nav class="navbar">
     <div class="left">
-        <a href="/" class="logo">Adna</a>
+        <a href="index.html" class="logo">Adna.h</a>
     </div>
 
     <!-- Hamburger Input (Hidden Checkbox) -->
@@ -29,89 +28,134 @@
 
     <!-- Navigation Links -->
     <div class="nav-links">
-        <a class="nav-link" href="#skills"><span class="first">VJEŠTINE</span><span class="second">VJEŠTINE</span></a>
-        <a class="nav-link" href="#projects"><span class="first">PROJEKTI</span><span class="second">PROJEKTI</span></a>
-        <a class="nav-link" href="#gallery"><span class="first">GALERIJA</span><span class="second">GALERIJA</span></a>
-        <a class="nav-link" href="#blog"><span class="first">BLOG</span><span class="second">BLOG</span></a>
-        <a class="nav-link" href="#contact"><span class="first">KONTAKT</span><span class="second">KONTAKT</span></a>
+        <a class="nav-link" href="#about">
+            <span class="first">O MENI</span>
+            <span class="second">O MENI</span>
+        </a>
+        <a class="nav-link" href="#skills">
+            <span class="first">VJEŠTINE</span>
+            <span class="second">VJEŠTINE</span>
+        </a>
+        <a class="nav-link" href="projekti.html">
+            <span class="first">PROJEKTI</span>
+            <span class="second">PROJEKTI</span>
+        </a>
+        <a class="nav-link" href="galerija.html">
+            <span class="first">GALERIJA</span>
+            <span class="second">GALERIJA</span>
+        </a>
+        <a class="nav-link" href="blog.html">
+            <span class="first">BLOG</span>
+            <span class="second">BLOG</span>
+        </a>
+        <a class="nav-link" href="kontakt.html">
+            <span class="first">KONTAKT</span>
+            <span class="second">KONTAKT</span>
+        </a>
     </div>
+
 </nav>
 
+<!--HERO-->
+<section class="hero-section">
+    <div class="text">
+        <h1>
+            zdravo, zovem se adna hadžiselimović. <br>
+            Studentica kompjuterskih nauka
+            <span class="smaller"> (trenutno)</span>
+            , <br> fotograf
+            <span class="smaller"> (donekle)</span>
+            , <br> ljubitelj putovanja
+            <span class="smaller"> (možda i prevelik)</span>
+            .
+        </h1>
+        <a href="#about" class="hero-btn">Saznaj više</a>
+    </div>
+</section>
+
 <main>
-    <!--HERO-->
-    <section class="hero">
-        <div class="headshot">
-            <img src="img/headshot.jpg" alt="headshot">
-        </div>
-        <div class="text">
-            <h1>zdravo</h1>
-        </div>
-    </section>
 
     <!--O MENI-->
     <section id="about">
-
+        <h2>o meni</h2>
     </section>
+
+
     <!--VJESTINE-->
-    <section class="skills">
-        <h2>skills</h2>
+    <section id="skills" class="skills-section">
+        <h2>vještine</h2>
 
+        <div class="skills-grid">
+            <article class="skill-card">
+                <h3>tehničke vještine</h3>
+                <div class="skill-body">
+                    <span class="skill-pill">Python</span>
+                    <span class="skill-pill">C++</span>
+                    <span class="skill-pill">HTML</span>
+                    <span class="skill-pill">CSS</span>
+                    <span class="skill-pill">Java</span>
+                    <span class="skill-pill">MySQL</span>
+                    <span class="skill-pill">SQL</span>
+                    <span class="skill-pill">Node.js</span>
+                    <span class="skill-pill">Express</span>
+                    <span class="skill-pill">Wolfram Mathematica</span>
+                    <span class="skill-pill">R</span>
+                    <span class="skill-pill">Git</span>
+                </div>
+            </article>
 
-        <div class="cells">
-            <div class="cell">
-                <span>HTML</span>
-            </div>
-            <div class="cell">
-                <span>CSS</span>
-            </div>
-            <div class="cell">
-                <span>C++</span>
-            </div>
-            <div class="cell">
-                <span>Python</span>
-            </div>
-            <div class="cell">
-                <span>SQL</span>
-            </div>
+            <article class="skill-card">
+                <h3>jezici</h3>
+                <div class="skill-body">
+                    <span class="skill-pill">bosanski (maternji)</span>
+                    <span class="skill-pill">engleski C2</span>
+                    <span class="skill-pill">njemački C1</span>
+                </div>
+            </article>
+
+            <article class="skill-card">
+                <h3>soft skills</h3>
+                <div class="skill-body">
+                    <span class="skill-pill">PR & komunikacija</span>
+                    <span class="skill-pill">organizacija događaja</span>
+                    <span class="skill-pill">rad u timovima</span>
+                    <span class="skill-pill">rad s učesnicima & predavačima</span>
+                    <span class="skill-pill">promocija na društvenim mrežama</span>
+                    <span class="skill-pill">liderstvo</span>
+                    <span class="skill-pill">koordinacija tima</span>
+                    <span class="skill-pill">prezentacijske vještine</span>
+                    <span class="skill-pill">upravljanje vremenom</span>
+                    <span class="skill-pill">komunikacijske vještine</span>
+                    <span class="skill-pill">problem-solving</span>
+                    <span class="skill-pill">upravljanje budžetom</span>
+                </div>
+            </article>
         </div>
-
-
-    </section>
-    <!--PROJEKTI-->
-    <section id="projects">
-
-    </section>
-    <!--GALERIJA-->
-    <section id="gallery">
-
-    </section>
-
-    <!--BLOG-->
-    <section id="blog">
-
-    </section>
-
-    <!--KONTAKT-->
-    <section id="contact">
-
     </section>
 </main>
 <footer>
-    <a href="https://instagram.com/" target="blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-instagram"></i>
-    </a>
-    <a href="https://www.youtube.com/" target="blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-youtube"></i>
-    </a>
-    <a href="https://linkedin.com/" target="blank" rel="noopener noreferrer">
-    <i class="fa-brands fa-linkedin"></i>
-    </a>
-    <a href="https://github.com/" target="blank" rel="noopener noreferrer">
-    <i class="fa-brands fa-github"></i>
-    </a>
-    <a href="mailto:">
-        <i class="fa-regular fa-envelope"></i>
-    </a>
+    <div class="social-icons">
+        <a href="https://instagram.com/" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-youtube"></i>
+        </a>
+        <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">
+            <i class="fa-brands fa-github"></i>
+        </a>
+        <a href="mailto:adnahadziselimovic@gmail.com" rel="noopener noreferrer">
+            <i class="fa-regular fa-envelope"></i>
+        </a>
+    </div>
+
+    <div class="footer-content">
+        <p>&copy; 2025 adna.h | All rights reserved.</p>
+    </div>
 </footer>
+
 </body>
 </html>
