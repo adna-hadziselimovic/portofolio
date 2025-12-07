@@ -57,7 +57,7 @@ a {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 2rem 3rem;
+    padding: 2rem 2rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -67,7 +67,7 @@ a {
 
 .logo {
     font-family: var(--font-primary);
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 600;
     color: var(--text-color);
 }
@@ -86,10 +86,10 @@ a {
 .nav-link {
     position: relative;
     font-family: var(--font-primary);
-    font-size: 2.25rem;
+    font-size: 1.8rem;
     text-transform: uppercase;
     display: inline-block;
-    height: 2.25rem;
+    height: 1.8rem;
     overflow: hidden;
 }
 
@@ -122,12 +122,12 @@ a {
 }
 
 .nav-link.active .first {
-    opacity: 1; !important;
-    transform: translateY(0); !important;
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .nav-link.active .second {
-    display: none; !important;
+    display: none;
 }
 
 /* Hamburger Menu */
@@ -251,13 +251,115 @@ a {
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.25);
 }
 
+/* ABOUT */
+
+.about-section {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-top: 5rem;
+    padding-left: 6rem;
+    display: flex;
+    gap: 3rem;
+    align-items: flex-start;
+}
+
+
+.heading {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 0 0 2rem;
+    color: var(--text-color);
+    font-size: 3rem;
+    letter-spacing: 0.05em;
+}
+
+/* Tekst */
+
+.about-text{
+    flex: 3;
+}
+
+.about-text p {
+    color: var(--text-color);
+    font-size: 1rem;
+    font-family: var(--font-secondary);
+    font-weight: 400;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+/* Desna kolona: headshot */
+
+.about-photo {
+    flex: 2;
+    display: flex;
+    justify-content: center;
+}
+
+.photo-wrapper {
+    margin-top: 2rem;
+    position: relative;
+    width: 260px;
+    max-width: 100%;
+}
+
+.photo-wrapper img {
+    display: block;
+    width: 100%;
+    border-radius: 4px;
+    filter: grayscale(25%) contrast(1.05);
+    mix-blend-mode: normal;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.4);
+}
+
+.photo-border {
+    position: absolute;
+    inset: 14px -14px -14px 14px;
+    border-radius: 4px;
+    border: 2px solid var(--text-color);
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+
+/* Hover efekat u njenom stilu */
+
+.photo-wrapper::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    border-radius: 4px;
+    background-color: var(--text-color);
+    mix-blend-mode: screen;
+    opacity: 0.15;
+    transition: opacity 0.3s ease;
+    z-index: 3;
+}
+
+.photo-wrapper:hover img {
+    filter: none;
+    transform: translate(-4px, -4px);
+}
+
+.photo-wrapper:hover .photo-border {
+    transform: translate(6px, 6px);
+}
+
+.photo-wrapper:hover::before {
+    opacity: 0;
+}
+
+
 
 
 /* =========================================
    SKILLS SECTION
    ========================================= */
 .skills-section {
-    padding: 5rem 3.125rem;
+    padding: 5rem 8rem;
 }
 
 .skills-section h2 {
@@ -266,6 +368,8 @@ a {
     text-transform: uppercase;
     margin-bottom: 3rem;
     color: var(--text-color);
+    letter-spacing: 0.05em;
+
 }
 
 /* grid of cards */
@@ -307,7 +411,7 @@ a {
     z-index: 1;
     font-size: 2.25rem;
     text-transform: uppercase;
-    letter-spacing: 0.1em;
+    letter-spacing: 0.05em;
     margin-bottom: 1rem;
     display: inline-flex;
     align-items: center;
@@ -319,7 +423,7 @@ a {
     width: 0.6rem;
     height: 0.6rem;
     border-radius: 999px;
-    background: #96A78D;
+    background: var(--background-color);
 }
 
 /* pill container */
@@ -1003,6 +1107,18 @@ footer .social-icons {
         padding: 0.8rem 2rem;
         font-size: 0.9rem;
         letter-spacing: 0.06em;
+    }
+
+    .about-section {
+        gap: 2.5rem;
+    }
+
+    .about-photo {
+        order: -1;
+    }
+
+    .photo-wrapper {
+        width: 220px;
     }
 
     .skills-section {
