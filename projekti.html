@@ -53,50 +53,221 @@
     <section class="projects-section">
         <h2>projekti</h2>
 
+
+        <!-- FILTER -->
+        <input type="radio" name="project-filter" id="filter-all" checked>
+        <input type="radio" name="project-filter" id="filter-ndvp">
+        <input type="radio" name="project-filter" id="filter-eestec">
+
+        <div class="project-filters">
+            <label for="filter-all">Svi projekti</label>
+            <label for="filter-ndvp">NDVP</label>
+            <label for="filter-eestec">EESTEC</label>
+        </div>
+
         <div class="projects-grid">
 
-            <div class="card" tabindex="0">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="img/project1.jpg" alt="Screenshot projekta">
-                        <h3>Naziv Projekta</h3>
-                        <p class="date">novembar 2025</p>
-                    </div>
-                    <div class="card-back">
-                        <p>Kratak opis projekta. Koje tehnologije koristite? Koji problem rješava?</p>
-                    </div>
+            <!-- Project 1 -->
+            <a href="#modal-1" class="project-card" data-category="ndvp">
+                <img src="img/project1.jpg" alt="Screenshot projekta">
+                <div class="project-overlay">
+                    <h3>Aftermath 2025</h3>
+                    <p class="subtitle">novembar 2025 • PR koordinator</p>
+                    <p class="description">Naučna konferencija za srednjoškolce iz BiH i regije</p>
                 </div>
-            </div>
+            </a>
 
-            <div class="card" tabindex="0">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="img/project2.jpg" alt="Screenshot projekta">
-                        <h3>Web Portfolio</h3>
-                        <p class="date">oktobar 2025</p>
-                    </div>
-                    <div class="card-back">
-                        <p>Portfolio sajt kreiran sa HTML, CSS i modernim dizajn principima. Responsive i pristupačan.</p>
-                    </div>
+            <!-- Project 2 -->
+            <a href="#modal-2" class="project-card" data-category="eestec">
+                <img src="img/project2.jpg" alt="Screenshot projekta">
+                <div class="project-overlay">
+                    <h3>Jobfair 2025</h3>
+                    <p class="subtitle">novembar 2025 • glavna organizatorica</p>
+                    <p class="description">Sajam zapošljavanja za studente i diplomce tehinčko-tehnoloških fakulteta i ekonomije</p>
                 </div>
-            </div>
+            </a>
 
-            <div class="card" tabindex="0">
-                <div class="card-inner">
-                    <div class="card-front">
-                        <img src="img/project3.jpg" alt="Screenshot projekta">
-                        <h3>C++ Aplikacija</h3>
-                        <p class="date">septembar 2025</p>
-                    </div>
-                    <div class="card-back">
-                        <p>Desktop aplikacija razvijena u C++ sa fokusom na efikasnost i organizaciju koda.</p>
-                    </div>
+            <!-- Project 3 -->
+            <a href="#modal-3" class="project-card" data-category="ndvp">
+                <img src="img/project3.jpg" alt="Screenshot projekta">
+                <div class="project-overlay">
+                    <h3>Maths Beyond Limits Balkans 2025</h3>
+                    <p class="subtitle">april 2025 • PR koordinator</p>
+                    <p class="description">Internacionalni matematički kamp za srednjoškolce</p>
+
                 </div>
-            </div>
+            </a>
+
+            <!-- Project 4 -->
+            <a href="#modal-4" class="project-card" data-category="ndvp">
+                <img src="img/project4.jpg" alt="Screenshot projekta">
+                <div class="project-overlay">
+                    <h3>Matematika i primjene 2024</h3>
+                    <p class="subtitle">novembar 2024 • PR koordinator</p>
+                    <p class="description">Naučna konferencija za srednjoškolce iz BiH i regije</p>
+
+                </div>
+            </a>
 
         </div>
+
+        <div id="modal-1" class="modal">
+            <a href="#" class="modal-backdrop"></a>
+            <div class="modal-content">
+                <a href="#" class="modal-close">&times;</a>
+                <img src="img/project1.jpg" alt="Aftermath 2025">
+                <h3>Aftermath 2025</h3>
+                <p class="subtitle">novembar 2025 • PR koordinator</p>
+
+                <p class="description">
+                    AfterMath je naučna konferencija za srednjoškolce koja je okupila više od 100 učenika iz preko 50 gradova iz BiH i regije. Fokus konferencije je na konkretnim primjenama matematike - od mašinskog učenja, vjerovatnoće i statistike, do numeričke matematike, teorije grupa i analize, uz predavače sa vrhunskih regionalnih i međunarodnih univerziteta.
+                </p>
+
+                <h4>Moja uloga</h4>
+                <p class="description">
+                    Kao PR koordinator radila sam na vizuelnom identitetu konferencije i komunikaciji sa učesnicima - pripremala sam promotivne materijale, fotografisala predavanja i projekte, te kreirala sadržaj za društvene mreže. Također sam sarađivala s ostatkom tima na usklađivanju informacija o prijavama, smještaju i programu kako bi komunikacija bila jasna.
+                </p>
+
+                <h4>Tehnologije</h4>
+                <div class="tech-tags">
+                    <span>Canva</span>
+                    <span>Adobe Lightroom</span>
+                    <span>Adobe Photoshop</span>
+                </div>
+
+                <h4>Izazovi i rješenja</h4>
+                <p class="description">
+                    Velikom broju učesnika iz različitih gradova značilo je da informacije o prijavama, rasporedu i sadržaju moraju biti jasno i dosljedno komunicirane. Pripremom  vizualno ujednačenih objava i korištenjem planiranih kampanja na društvenim mrežama uspjela sam smanjiti broj nejasnoća i upita te učesnicima pružiti pravovremene informacije.
+                </p>
+
+
+                <h4>Rezultati</h4>
+                <p class="description">
+                    Konferencija je uspješno privukla veliki broj prijava, a sadržaj na društvenim mrežama značajno je povećao angažman učesnika i vidljivost projekta među srednjoškolcima i nastavnicima iz cijele regije.
+                </p>
+            </div>
+        </div>
+
+
+        <div id="modal-2" class="modal">
+            <a href="#" class="modal-backdrop"></a>
+            <div class="modal-content">
+                <a href="#" class="modal-close">&times;</a>
+                <img src="img/project2.jpg" alt="JobFAIR 2025">
+                <h3>JobFAIR 2025</h3>
+                <p class="subtitle">novembar 2025 • glavna organizatorica</p>
+
+                <p class="description">
+                    JobFAIR ’25 - „Iskoristi svoju šansu“ je sajam zapošljavanja namijenjen studentima i diplomcima tehničko‑tehnoloških i ekonomije. Sajam služi kao platforma za povezivanje mladih sa kompanijama, promociju aktuelnih radnih pozicija i programa praksi, te direktnu razmjenu informacija o tržištu rada i mogućnostima profesionalnog razvoja.
+                </p>
+
+                <h4>Moja uloga</h4>
+                <p class="description">
+                    Kao glavna organizatorica koordinisala sam rad više timova, planirala ključne faze projekta i vodila operativne sastanke. Bila sam odgovorna za komunikaciju s kompanijama učesnicama, partnerima i medijima, kao i za raspodjelu budžeta i nadzor nad troškovima kako bi projekat bio finansijski održiv.
+                </p>
+
+                <h4>Tehnologije</h4>
+                <div class="tech-tags">
+                    <span>Google Workspace</span>
+                    <span>Sheets</span>
+                    <span>Canva</span>
+                </div>
+
+                <h4>Izazovi i rješenja</h4>
+                <p class="description">
+                    U kratkom roku bilo je potrebno uskladiti očekivanja kompanija, raspoložive termine, logistiku štandova i promotivne aktivnosti. To sam postigla jasnim timelineom, centralizovanim dokumentima za praćenje zadataka i redovnom komunikacijom s timovima i predstavnicima kompanija.
+                </p>
+
+                <h4>Rezultati</h4>
+                <p class="description">
+                    Sajam je uspješno okupio veliki broj posjetioca i kompanija, a kroz direktne kontakte s poslodavcima te pratećim radionicama studenti su dobili konkretniji uvid u mogućnosti zapošljavanja i dalje profesionalno usmjeravanje.
+                </p>
+            </div>
+        </div>
+
+
+
+        <!-- Modal 3 -->
+
+        <div id="modal-3" class="modal">
+            <a href="#" class="modal-backdrop"></a>
+            <div class="modal-content">
+                <a href="#" class="modal-close">&times;</a>
+                <img src="img/project3.jpg" alt="Maths Beyond Limits Balkans 2025">
+                <h3>Maths Beyond Limits Balkans 2025</h3>
+                <p class="subtitle">april 2025 • PR koordinator</p>
+
+                <p class="description">
+                    Maths Beyond Limits Balkans 2025 je međunarodni matematički kamp održan u Konjicu, namijenjen talentovanim srednjoškolcima iz više od dvadeset zemalja koji žele da rade na naprednim matematičkim temama i upoznaju različite kulture. Tokom deset dana učesnici su pohađali intenzivne blokove predavanja, učestvovali u večernjim akademskim i društvenim aktivnostima te istraživali Bosnu i Hercegovinu kroz organizovane izlete.
+                </p>
+
+                <h4>Moja uloga</h4>
+                <p class="description">
+                    Koordinirala sam PR aktivnosti: fotografisala kamp, komunicirala s medijima i vodila društvene mreže (Instagram, Facebook), time kreirajući vizuelni i tekstualni sadržaj koji je doprinijeo većoj vidljivosti kampa, dosljednom brendiranju i profesionalnoj prezentaciji događaja.
+                </p>
+
+                <h4>Tehnologije</h4>
+                <div class="tech-tags">
+                    <span>Canva</span>
+                    <span>Adobe Lightroom</span>
+                    <span>Adobe Photoshop</span>
+
+                </div>
+
+                <h4>Izazovi i rješenja</h4>
+                <p class="description">
+                    U realnom vremenu objavljivala dešavanja s kampa, time kreirajući vizuelni identitet koji je dobio 2K+ pregleda.
+                </p>
+
+                <h4>Rezultati</h4>
+                <p class="description">
+                    Povećala vidljivost kampa za 150% kroz organski doseg na društvenim mrežama.
+                </p>
+
+            </div>
+        </div>
+
+        <div id="modal-4" class="modal">
+            <a href="#" class="modal-backdrop"></a>
+            <div class="modal-content">
+                <a href="#" class="modal-close">&times;</a>
+                <img src="img/project4.jpg" alt="Matematika i primjene 2024">
+                <h3>Matematika i primjene 2024</h3>
+                <p class="subtitle">novembar 2024 • PR koordinator</p>
+
+                <p class="description">
+                    Matematika i primjene je naučna konferencija za srednjoškolce u organizaciji Naučnog društva "Vladimir Prelog" koja se održala u Sarajevu i okupila oko 100 učesnika iz cijele BiH i regije. Tokom pet dana konferencija ponudila je predavanja i projekte o primjenama matematike u biznisu, finansijama, računarstvu, biologiji, hemiji i drugim industrijama, uz poseban fokus na karijerne perspektive matematičara.
+                </p>
+
+                <h4>Moja uloga</h4>
+                <p class="description">
+                    Kao PR koordinator bila sam zadužena za planiranje i realizaciju komunikacije prema učesnicima i javnosti - fotografisala sam predavanja i aktivnosti, pripremala vizuale i objave. Pored toga, koordinisala sam objave s ostalim članovima organizacionog tima kako bi komunikacija bila pravovremena.
+                </p>
+
+                <h4>Tehnologije</h4>
+                <div class="tech-tags">
+                    <span>Canva</span>
+                    <span>Adobe Lightroom</span>
+                    <span>Adobe Photoshop</span>
+                </div>
+
+                <h4>Izazovi i rješenja</h4>
+                <p class="description">
+                    U kratkom roku bilo je potrebno predstaviti kompleksne teme na pristupačan način srednjoškolcima iz različitih gradova, uz istovremeno praćenje rasporeda predavanja i aktivnosti. Rješavala sam to pripremom vizuelnih templatea unaprijed i jasnim planom objava, što je omogućilo brzu obradu fotografija i komunikaciju u realnom vremenu.
+                </p>
+
+                <h4>Rezultati</h4>
+                <p class="description">
+                    Konferencija je zadržala i proširila bazu učesnika iz prethodnih izdanja, a online prisustvo doprinijelo je tome da "Matematika i primjene" postane prepoznat brend među srednjoškolcima zainteresovanim za matematiku i STEM oblasti.
+                </p>
+
+            </div>
+        </div>
+
+
     </section>
 </main>
+
 
 <footer>
     <div class="social-icons">
