@@ -1,11 +1,10 @@
-/* Import common styles */
 @import url('common.css');
 
 /* =========================================
-   BLOG PAGE
+   BLOG STRANICA
    ========================================= */
 .blog-page {
-    padding: 7rem 2rem 2rem 2rem;
+    padding: 7rem var(--space-lg) var(--space-lg) var(--space-lg);
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -13,20 +12,20 @@
 .blog-page h1 {
     font-size: 5rem;
     text-align: center;
-    margin-bottom: 2rem;
+    margin-bottom: var(--space-lg);
     letter-spacing: 0.025em;
 }
 
 .blog-archive {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(480px, 1fr));
-    gap: 2rem;
+    gap: var(--space-lg);
 }
 
 .blog-article {
     position: relative;
-    padding: 2rem;
-    background: #F0F0F0;
+    padding: var(--space-lg);
+    background: var(--text-color);
     border-radius: var(--border-radius);
     border: 1px solid rgba(150, 167, 141, 0.15);
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
@@ -42,7 +41,7 @@
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, #96A78D, #B6CEB4);
+    background: linear-gradient(90deg, var(--background-color), var(--color-accent));
     transform: scaleX(0);
     transform-origin: left;
     transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
@@ -63,7 +62,7 @@
     height: 200px;
     object-fit: cover;
     border-radius: calc(var(--border-radius) - 4px);
-    margin-bottom: 1.5rem;
+    margin-bottom: var(--space-md);
     transition: transform 0.4s ease;
 }
 
@@ -75,32 +74,31 @@
     display: inline-block;
     font-family: var(--font-secondary);
     font-size: 0.875rem;
-    color: #96A78D;
+    color: var(--background-color);
     text-transform: uppercase;
     margin-bottom: 0.75rem;
 }
 
 .blog-article h3 {
     font-size: 2.5rem;
-    color: #96A78D;
+    color: var(--background-color);
     line-height: 1.2;
-    margin-bottom: 1rem;
-    transition: color 0.3s ease;
+    margin-bottom: var(--space-sm);
+    transition: color var(--transition-standard);
 }
 
 .blog-article:hover h3 {
-    color: #4b5b46;
+    color: var(--color-dark-green);
 }
 
 .blog-article p:last-child {
     font-family: var(--font-secondary);
     font-size: 1.05rem;
-    color: #4b5b46;
+    color: var(--color-dark-green);
     line-height: 1.6;
     opacity: 0.9;
 }
 
-/* Stilizuj link oko cijele kartice */
 .article-link {
     text-decoration: none;
     color: inherit;
@@ -108,36 +106,41 @@
     height: 100%;
 }
 
-/* Osiguraj konzistentne boje unutar linka */
 .article-link h3 {
-    color: #96A78D;
+    color: var(--background-color);
 }
 
 .article-link:hover h3 {
-    color: #4b5b46;
+    color: var(--color-dark-green);
 }
 
 .article-link .date {
-    color: #96A78D;
+    color: var(--background-color);
 }
 
 .article-link p:last-child {
-    color: #4b5b46;
+    color: var(--color-dark-green);
 }
 
+/* =========================================
+   RESPONZIVNOST
+   ========================================= */
 @media (max-width: 768px) {
+    .blog-page{
+        padding: 6rem 3rem;
+    }
     .blog-page h1 {
         font-size: 3.5rem;
-        margin-bottom: 3rem;
+        margin-bottom: var(--space-xl);
     }
 
     .blog-archive {
         grid-template-columns: 1fr;
-        gap: 1.5rem;
+        gap: var(--space-md);
     }
 
     .blog-article {
-        padding: 1.5rem;
+        padding: var(--space-md);
     }
 
     .blog-article h3 {
@@ -147,7 +150,7 @@
 
 @media (max-width: 480px) {
     .blog-page {
-        padding: 6rem 1rem 3rem 1rem;
+        padding: 6rem var(--space-sm) var(--space-xl) var(--space-sm);
     }
 
     .blog-page h1 {

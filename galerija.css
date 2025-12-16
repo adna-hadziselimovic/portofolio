@@ -1,15 +1,14 @@
 @import url('common.css');
 
 /* =========================================
-   GALLERY
+   GALERIJA
    ========================================= */
 .gallery-wrapper {
     position: relative;
-    /* No fixed height needed */
 }
 
 .gallery-item {
-    background-color: var(--background-color);
+    background-color: transparent;
     padding: 0;
 }
 
@@ -23,7 +22,7 @@
     position: sticky;
     top: 0;
     text-align: center;
-    padding: 6rem 2rem 1rem;
+    padding: 6rem var(--space-lg) var(--space-sm);
     background-color: var(--background-color);
 }
 
@@ -48,9 +47,9 @@
 .photo-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    padding: 2rem;
-    background-color: var(--background-color);
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    background-color: transparent;
 }
 
 .photo-large {
@@ -78,28 +77,34 @@
     border-radius: var(--border-radius);
 }
 
-.photo-large img, .photo-small img {
+.photo-large img,
+.photo-small img {
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    transition: box-shadow var(--transition-standard),
+    transform var(--transition-standard);
 }
 
-.photo-large:hover img, .photo-small:hover img {
+.photo-large:hover img,
+.photo-small:hover img {
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
     transform: translateY(-4px);
 }
 
-
+/* =========================================
+   RESPONZIVNOST
+   ========================================= */
 @media (max-width: 768px) {
     .gallery-item {
-        padding: 1rem 1rem 2rem;
+        padding: var(--space-md) var(--space-sm) var(--space-lg);
     }
 
-    .trip-header{
-        padding-top: 2rem;
+    .trip-header {
+        padding-top: var(--space-lg);
+        padding-bottom: var(--space-sm);
     }
 
     .trip-header h2 {
-        font-size: 2rem;
+        font-size: 1.75rem;
     }
 
     .trip-header h3 {
@@ -107,7 +112,8 @@
     }
 
     .photo-grid {
-        gap: 1rem;
+        gap: var(--space-sm);
+        padding: var(--space-sm);
     }
 
     .photo-large {
@@ -118,4 +124,3 @@
         height: 25vh;
     }
 }
-

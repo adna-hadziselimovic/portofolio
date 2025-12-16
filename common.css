@@ -1,24 +1,44 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 /* =========================================
-   CSS VARIABLES
+   CSS VARIJABLE
    ========================================= */
-
-
 :root {
+    /* Boje */
     --text-color: #F0F0F0;
     --background-color: #96A78D;
+    --color-white: #ffffff;
+    --color-dark: #384436;
+    --color-dark-green: #4b5b46;
+    --color-accent: #B6CEB4;
+    --color-border: #e0e0e0;
+
+    /* Tipografija */
     --font-primary: 'Bebas Neue', sans-serif;
     --font-secondary: 'Inter', sans-serif;
     --font-tertiary: 'EB Garamond', serif;
+
+    /* Razmaci */
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 3rem;
+
+    /* Radijus */
     --border-radius: 10px;
+    --radius-small: 0.5rem;
+    --radius-medium: 1rem;
+    --radius-large: 1.5rem;
+    --radius-full: 999px;
+
+    /* Tranzicije */
     --transition-smooth: 0.7s cubic-bezier(0.16, 1, 0.3, 1);
     --transition-standard: 0.3s ease;
 }
 
-
 /* =========================================
-   GLOBAL RESETS
+   GLOBALNO
    ========================================= */
 * {
     margin: 0;
@@ -71,7 +91,6 @@ main {
     bottom: -150px;
     animation: float 20s linear infinite;
 }
-
 
 .background-shapes span:nth-child(1) {
     left: 15%;
@@ -142,21 +161,19 @@ main {
     }
 }
 
-
 a {
     color: var(--text-color);
     text-decoration: none;
 }
 
-
 /* =========================================
-   NAVIGATION
+   NAVIGACIJA
    ========================================= */
 .navbar {
     position: fixed;
     top: 0;
     width: 100%;
-    padding: 2rem 2rem;
+    padding: var(--space-lg) var(--space-lg);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -173,12 +190,12 @@ a {
 
 .right {
     display: flex;
-    gap: 2rem;
+    gap: var(--space-lg);
 }
 
 .nav-links {
     display: flex;
-    gap: 2rem;
+    gap: var(--space-lg);
 }
 
 .nav-link {
@@ -228,8 +245,6 @@ a {
     display: none;
 }
 
-
-
 /* Hamburger Meni */
 /* rađeno po uzoru na: https://janessagarrow.com/blog/pure-css-hamburger-menu/ */
 #menu-btn {
@@ -268,7 +283,6 @@ a {
     top: -8px;
 }
 
-
 /* =========================================
    FOOTER
    ========================================= */
@@ -276,9 +290,9 @@ footer {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1rem;
+    gap: var(--space-sm);
     padding-top: 0;
-    padding-bottom: 1rem;
+    padding-bottom: var(--space-sm);
     background-color: transparent;
 }
 
@@ -292,8 +306,8 @@ footer .footer-content p {
 
 footer a {
     color: var(--text-color);
-    font-size: 1.75rem; /* Larger icons */
-    transition: opacity 0.3s ease;
+    font-size: 1.75rem;
+    transition: opacity var(--transition-standard);
     display: inline-block;
 }
 
@@ -303,7 +317,7 @@ footer a:hover {
 
 footer .social-icons {
     display: flex;
-    gap: 1.5rem;
+    gap: var(--space-md);
 }
 
 .back-to-home {
@@ -323,7 +337,7 @@ footer .social-icons {
     text-decoration: none;
     text-transform: uppercase;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-    transition: all 0.3s ease;
+    transition: all var(--transition-standard);
     z-index: 1000;
 }
 
@@ -337,7 +351,7 @@ footer .social-icons {
 }
 
 /* =========================================
-    RESPONSIVE
+   RESPONZIVNOST
    ========================================= */
 @media (max-width: 1024px) {
     .navbar .logo {
@@ -410,8 +424,15 @@ footer .social-icons {
         background: var(--background-color);
     }
 
+    .back-to-home {
+        bottom: 20px;
+        right: 20px;
+        padding: 10px 10px;
+        font-size: 0.85rem;
+    }
+
     footer {
-        padding: 1rem 1rem;
+        padding: var(--space-sm) var(--space-sm);
     }
 
     footer .social-icons {
@@ -425,13 +446,29 @@ footer .social-icons {
     footer .footer-content p {
         font-size: 0.65rem;
     }
-
 }
 
 @media (max-width: 768px) {
-
-    .navbar{
-        padding: 1rem 1rem;
+    .navbar {
+        padding: var(--space-sm) var(--space-sm);
     }
 
+    .back-to-home {
+        bottom: 15px;
+        right: 15px;
+        padding: 10px 10px;
+        font-size: 0.8rem;
+        gap: 6px;
+    }
+}
+
+@media (max-width: 420px) {
+    .back-to-home {
+        bottom: 12px;
+        right: 12px;
+        padding: 8px 8px;
+        font-size: 0.75rem;
+        gap: 4px;
+        border-radius: 6px;
+    }
 }
