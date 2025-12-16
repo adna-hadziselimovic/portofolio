@@ -3,11 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/favicon.png">
     <title>Blog</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="blog.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 </head>
 <body>
+
+<div class="background-shapes">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
 
 <!-- NAVBAR -->
 <nav class="navbar">
@@ -38,7 +48,7 @@
                 <span class="first">GALERIJA</span>
                 <span class="second">GALERIJA</span>
             </a>
-            <a class="nav-link" href="blog.html">
+            <a class="nav-link active" href="blog.html">
                 <span class="first">BLOG</span>
                 <span class="second">BLOG</span>
             </a>
@@ -55,85 +65,42 @@
         <h1>NAJNOVIJE VIJESTI</h1>
 
         <div class="blog-archive">
-
             <article class="blog-article">
-                <img src="img/blog1.jpg" alt="Blog post">
-                <h3>Putovanje u Pariz</h3>
-                <p class="date">28. novembar 2025</p>
-                <p>Kratki opis mog putovanja u Pariz i sve što sam tamo naučila...</p>
+                <a href="posts/ml-za-studente.html" class="article-link">
+                    <h3>Kako početi s mašinskim učenjem kao student</h3>
+                    <p class="date">26. novembar 2025</p>
+                    <p>Praktični vodič za prve projekte u AI/ML svijetu...</p>
+                </a>
             </article>
 
             <article class="blog-article">
-                <h3>Moj prvi C++ projekat</h3>
-                <p class="date">15. novembar 2025</p>
-                <p>Kako sam kreirala svoju prvo aplikaciju koristeći C++ i koje su bile najveće prepreke.</p>
+                <a href="posts/ai-trendovi.html" class="article-link">
+                    <h3>AI trendovi koji će oblikovati naredne godine</h3>
+                    <p class="date">22. novembar 2025</p>
+                    <p>U kom smjeru ide razvoj umjetne inteligencije?...</p>
+                </a>
             </article>
 
             <article class="blog-article">
-                <h3>CSS Grid Tutorial</h3>
-                <p class="date">10. novembar 2025</p>
-                <p>Sve što trebate znati o CSS Grid layoutu za moderne web aplikacije.</p>
+                <a href="posts/masinsko-ucenje.html" class="article-link">
+                    <h3>Šta je zapravo mašinsko učenje?</h3>
+                    <p class="date">16. novembar 2025</p>
+                    <p>Jednostavno objašnjenje jedne od najvažnijih grana umjetne inteligencije...</p>
+                </a>
             </article>
 
             <article class="blog-article">
-                <img src="img/blog2.jpg" alt="Blog post">
-                <h3>Fotografija u prirodi</h3>
-                <p class="date">5. novembar 2025</p>
-                <p>Moji savjeti za fotografiranje prirode i koje opremu koristim.</p>
-            </article>
-
-            <article class="blog-article">
-                <h3>Studij u Sloveniji</h3>
-                <p class="date">1. novembar 2025</p>
-                <p>Iskustva sa studentske razmjene na Univerzitetu u Ljubljani.</p>
-            </article>
-
-            <article class="blog-article">
-                <h3>Database Design</h3>
-                <p class="date">28. oktobar 2025</p>
-                <p>Osnove dizajniranja relacionih baza podataka i SQL optimizacija.</p>
-            </article>
-
-            <article class="blog-article">
-                <h3>UI/UX principi</h3>
-                <p class="date">20. oktobar 2025</p>
-                <p>Kako kreirati korisničko iskustvo koje je intuitivno i pristupačno.</p>
-            </article>
-
-            <article class="blog-article">
-                <h3>Portfolio tips</h3>
-                <p class="date">15. oktobar 2025</p>
-                <p>Kako sam kreirala svoj portfolio sajt i šta sam naučila u procesu.</p>
-            </article>
-
-            <article class="blog-article">
-                <h3>Python za početnike</h3>
-                <p class="date">10. oktobar 2025</p>
-                <p>Osnovni koncepti Python programiranja objašnjeni na jednostavan način.</p>
-            </article>
-
-            <article class="blog-article">
-                <h3>Responsive Design</h3>
-                <p class="date">5. oktobar 2025</p>
-                <p>Kako učiniti web stranice responsive koristeći CSS media queries.</p>
-            </article>
-
-            <article class="blog-article">
-                <img src="img/blog3.jpg" alt="Blog post">
-                <h3>Planinarenje u Bosni</h3>
-                <p class="date">1. oktobar 2025</p>
-                <p>Najljepše planinarske staze u Bosni i Hercegovini koje trebate posjetiti.</p>
-            </article>
-
-            <article class="blog-article">
-                <h3>Git i GitHub</h3>
-                <p class="date">25. septembar 2025</p>
-                <p>Osnovne Git komande i kako efikasno koristiti GitHub za vaše projekte.</p>
+                <a href="posts/ai-u-aplikacijama.html" class="article-link">
+                    <h3>Umjetna inteligencija u svakodnevnim aplikacijama</h3>
+                    <p class="date">12. novembar 2025</p>
+                    <p>Kako AI neprimjetno mijenja način na koji koristimo tehnologiju...</p>
+                </a>
             </article>
 
         </div>
     </div>
 </main>
+
 
 <footer>
     <div class="social-icons">
@@ -158,6 +125,10 @@
         <p>&copy; 2025 adna.h | All rights reserved.</p>
     </div>
 </footer>
+
+<a href="index.html" class="back-to-home">
+    <span>←</span> početna
+</a>
 
 </body>
 </html>

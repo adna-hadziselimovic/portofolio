@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <title>Šta je zapravo mašinsko učenje?</title>
+    <link rel="stylesheet" href="blog-post.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body>
+<div class="page-loader">
+    <div class="loader-spinner"></div>
+</div>
+
+<article class="blog-post">
+    <header class="post-header">
+        <a href="../blog.html" class="back-link">← Nazad na blog</a>
+        <time class="post-date" datetime="2025-11-16">16. novembar 2025.</time>
+        <h1 class="post-title">Šta je zapravo mašinsko učenje?</h1>
+        <p class="post-subtitle">Jednostavno objašnjenje jedne od najvažnijih grana umjetne inteligencije</p>
+    </header>
+
+    <!-- Video Player Section -->
+    <section class="video-section">
+        <a href="#video-player" class="video-toggle-btn">
+            <i class="fab fa-youtube"></i>
+            <span>Pogledaj video</span>
+        </a>
+
+
+        <div class="video-container" id="video-player">
+            <div class="video-backdrop">
+                <div class="video-wrapper">
+                    <a href="#" class="video-close-btn">
+                        <i class="fas fa-times"></i>
+                    </a>
+
+                    <iframe
+                            src="https://www.youtube.com/embed/i_LwzRVP7bg?rel=0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen>
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="post-content">
+        <h2>Uvod</h2>
+        <p>Mašinsko učenje (machine learning, ML) je grana umjetne inteligencije koja omogućava računarima da "uče" iz podataka umjesto da eksplicitno programiraš svako pravilo. Umjesto da ručno pišeš if-else logiku za svaki slučaj, model analizira veliki broj primjera i sam otkriva obrasce.</p>
+
+        <h2>Kako funkcioniše u tri koraka</h2>
+        <ul>
+            <li><strong>Prikupljanje podataka:</strong> slike, tekst, klikovi korisnika, finansijski zapisi – sve što predstavlja problem koji želiš riješiti.</li>
+            <li><strong>Trening modela:</strong> algoritam prolazi kroz podatke, prilagođava interne parametre i pokušava smanjiti grešku predikcije.</li>
+            <li><strong>Evaluacija i primjena:</strong> model se testira na novim podacima i, ako je dovoljno dobar, integriše u aplikaciju ili sistem.</li>
+        </ul>
+        <p>Jednostavan primjer je spam filter: dobije hiljade označenih e‑mailova (spam / nije spam), nauči obrasce u tekstu i metapodacima i zatim automatski klasifikuje nove poruke.</p>
+
+        <h2>Glavne vrste mašinskog učenja</h2>
+        <ul>
+            <li><strong>Nadzorovano učenje (supervised):</strong> imaš ulazne podatke i tačne "odgovore" (label-e), npr. cijena stana, da/ne, klasa slike.</li>
+            <li><strong>Nenadzorovano učenje (unsupervised):</strong> imaš samo ulaze i želiš otkriti strukturu, npr. klasterisanje korisnika po navikama kupovine.</li>
+            <li><strong>Učenje s potkrepljenjem (reinforcement):</strong> agent dobija nagrade/kazne za akcije u okruženju i uči strategiju, npr. AI koji igra igrice ili upravlja robotom.</li>
+        </ul>
+
+        <h2>Gdje sve vidimo ML u svakodnevnom životu</h2>
+        <p>Mašinsko učenje pokreće preporuke na streaming servisima, personalizovane oglase, prepoznavanje lica na fotografijama i automatsko prevođenje jezika. Sve češće se koristi i u medicini, finansijama te u obrazovanju, gdje sistemi prilagođavaju tempo i težinu gradiva svakom studentu.</p>
+
+        <h2>Zašto je važno za IT karijeru</h2>
+        <p>Za developere, razumijevanje ML-a otvara vrata ka pozicijama data scientista, ML inženjera i AI specijaliste. Čak i ako ne planiraš karijeru striktno u AI, osnovno razumijevanje modela, podataka i ograničenja sistema pomaže da bolje dizajniraš "pametne" aplikacije.</p>
+    </section>
+
+    <footer class="post-footer">
+        <a href="../blog.html" class="back-link">← Nazad na blog</a>
+    </footer>
+</article>
+</body>
+</html>

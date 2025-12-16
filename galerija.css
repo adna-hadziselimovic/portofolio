@@ -1,0 +1,121 @@
+@import url('common.css');
+
+/* =========================================
+   GALLERY
+   ========================================= */
+.gallery-wrapper {
+    position: relative;
+    /* No fixed height needed */
+}
+
+.gallery-item {
+    background-color: var(--background-color);
+    padding: 0;
+}
+
+.trip-content {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.trip-header {
+    position: sticky;
+    top: 0;
+    text-align: center;
+    padding: 6rem 2rem 1rem;
+    background-color: var(--background-color);
+}
+
+.gallery-wrapper:nth-child(1) .trip-header { z-index: 1; }
+.gallery-wrapper:nth-child(2) .trip-header { z-index: 2; }
+.gallery-wrapper:nth-child(3) .trip-header { z-index: 3; }
+.gallery-wrapper:nth-child(4) .trip-header { z-index: 4; }
+
+.trip-header h2 {
+    font-size: 3.5rem;
+    text-transform: uppercase;
+    margin-bottom: 0.1rem;
+}
+
+.trip-header h3 {
+    font-family: var(--font-tertiary);
+    font-size: 1.5rem;
+    font-weight: 500;
+    opacity: 0.75;
+}
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1.5rem;
+    padding: 2rem;
+    background-color: var(--background-color);
+}
+
+.photo-large {
+    grid-column: 1 / 3;
+    width: 100%;
+    height: auto;
+}
+
+.photo-large img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+.photo-small {
+    width: 100%;
+    height: auto;
+}
+
+.photo-small img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: var(--border-radius);
+}
+
+.photo-large img, .photo-small img {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.photo-large:hover img, .photo-small:hover img {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    transform: translateY(-4px);
+}
+
+
+@media (max-width: 768px) {
+    .gallery-item {
+        padding: 1rem 1rem 2rem;
+    }
+
+    .trip-header{
+        padding-top: 2rem;
+    }
+
+    .trip-header h2 {
+        font-size: 2rem;
+    }
+
+    .trip-header h3 {
+        font-size: 1rem;
+    }
+
+    .photo-grid {
+        gap: 1rem;
+    }
+
+    .photo-large {
+        height: 40vh;
+    }
+
+    .photo-small {
+        height: 25vh;
+    }
+}
+

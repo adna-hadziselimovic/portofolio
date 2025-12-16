@@ -1,0 +1,437 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+/* =========================================
+   CSS VARIABLES
+   ========================================= */
+
+
+:root {
+    --text-color: #F0F0F0;
+    --background-color: #96A78D;
+    --font-primary: 'Bebas Neue', sans-serif;
+    --font-secondary: 'Inter', sans-serif;
+    --font-tertiary: 'EB Garamond', serif;
+    --border-radius: 10px;
+    --transition-smooth: 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+    --transition-standard: 0.3s ease;
+}
+
+
+/* =========================================
+   GLOBAL RESETS
+   ========================================= */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    font-family: var(--font-primary);
+    color: var(--text-color);
+    background-color: var(--background-color);
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+main {
+    flex: 1;
+}
+
+.background-shapes {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.background-shapes span {
+    position: absolute;
+    display: block;
+    border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 255, 255, 0.8), rgba(173, 216, 230, 0.3));
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    box-shadow:
+            inset 0 0 20px rgba(255, 255, 255, 0.5),
+            0 0 20px rgba(173, 216, 230, 0.3);
+    bottom: -150px;
+    animation: float 20s linear infinite;
+}
+
+
+.background-shapes span:nth-child(1) {
+    left: 15%;
+    width: 80px;
+    height: 80px;
+    animation-delay: 0s;
+    background: rgba(182, 206, 180, 0.12);
+}
+
+.background-shapes span:nth-child(2) {
+    left: 35%;
+    width: 120px;
+    height: 120px;
+    animation-delay: 3s;
+    animation-duration: 25s;
+    background: rgba(150, 167, 141, 0.1);
+}
+
+.background-shapes span:nth-child(3) {
+    left: 55%;
+    width: 60px;
+    height: 60px;
+    animation-delay: 6s;
+    animation-duration: 18s;
+    background: rgba(217, 233, 207, 0.15);
+}
+
+.background-shapes span:nth-child(4) {
+    left: 70%;
+    width: 90px;
+    height: 90px;
+    animation-delay: 9s;
+    animation-duration: 22s;
+    background: rgba(182, 206, 180, 0.1);
+}
+
+.background-shapes span:nth-child(5) {
+    left: 10%;
+    width: 100px;
+    height: 100px;
+    animation-delay: 12s;
+    background: rgba(150, 167, 141, 0.12);
+}
+
+.background-shapes span:nth-child(6) {
+    left: 85%;
+    width: 70px;
+    height: 70px;
+    animation-delay: 15s;
+    animation-duration: 20s;
+    background: rgba(217, 233, 207, 0.12);
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0;
+    }
+    10% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+
+
+a {
+    color: var(--text-color);
+    text-decoration: none;
+}
+
+
+/* =========================================
+   NAVIGATION
+   ========================================= */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    padding: 2rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: transparent;
+    z-index: 100;
+}
+
+.logo {
+    font-family: var(--font-primary);
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: var(--text-color);
+}
+
+.right {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav-link {
+    position: relative;
+    font-family: var(--font-primary);
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    display: inline-block;
+    height: 1.8rem;
+    overflow: hidden;
+}
+
+.nav-link .first {
+    display: inline-block;
+    color: var(--text-color);
+    opacity: 0.5;
+    transform: translateY(0);
+    transition: transform var(--transition-smooth),
+    opacity var(--transition-standard);
+}
+
+.nav-link .second {
+    display: inline-block;
+    color: var(--text-color);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 1;
+    transform: translateY(2.5rem);
+    transition: transform var(--transition-smooth);
+}
+
+.nav-link:hover .first {
+    transform: translateY(-2.5rem);
+}
+
+.nav-link:hover .second {
+    transform: translateY(0);
+}
+
+.nav-link.active .first {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.nav-link.active .second {
+    display: none;
+}
+
+
+
+/* Hamburger Meni */
+/* rađeno po uzoru na: https://janessagarrow.com/blog/pure-css-hamburger-menu/ */
+#menu-btn {
+    display: none;
+}
+
+.menu-icon {
+    display: none;
+}
+
+.navicon {
+    background: var(--text-color);
+    display: block;
+    height: 2px;
+    width: 24px;
+    position: relative;
+    transition: background 0.2s ease-out;
+}
+
+.navicon:before,
+.navicon:after {
+    background: var(--text-color);
+    content: '';
+    display: block;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    transition: all 0.2s ease-out;
+}
+
+.navicon:before {
+    top: 8px;
+}
+
+.navicon:after {
+    top: -8px;
+}
+
+
+/* =========================================
+   FOOTER
+   ========================================= */
+footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding-top: 0;
+    padding-bottom: 1rem;
+    background-color: transparent;
+}
+
+footer .footer-content p {
+    font-family: var(--font-secondary);
+    font-size: 0.85rem;
+    color: var(--text-color);
+    opacity: 0.7;
+    margin: 0;
+}
+
+footer a {
+    color: var(--text-color);
+    font-size: 1.75rem; /* Larger icons */
+    transition: opacity 0.3s ease;
+    display: inline-block;
+}
+
+footer a:hover {
+    opacity: 0.7;
+}
+
+footer .social-icons {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.back-to-home {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 12px;
+    border-radius: 8px;
+    background-color: var(--text-color);
+    color: var(--background-color);
+    font-family: var(--font-secondary);
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.back-to-home:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+
+.back-to-home:active {
+    transform: translateY(-1px);
+}
+
+/* =========================================
+    RESPONSIVE
+   ========================================= */
+@media (max-width: 1024px) {
+    .navbar .logo {
+        font-size: 2rem;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        padding: 0.625rem;
+        z-index: 200;
+        position: relative;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100vw;
+        height: 100vh;
+        background-color: var(--text-color);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.1rem;
+        opacity: 0;
+        visibility: hidden;
+        transition: all 0.4s ease-in-out;
+        z-index: 150;
+    }
+
+    .nav-links .nav-link {
+        width: auto;
+        text-align: center;
+        font-size: 4rem;
+        height: auto;
+    }
+
+    .nav-links .nav-link .first,
+    .nav-links .nav-link .second {
+        color: var(--background-color);
+        position: static;
+        opacity: 1;
+        transform: none;
+    }
+
+    .nav-links .nav-link .second {
+        display: none;
+    }
+
+    #menu-btn:checked ~ .nav-links {
+        opacity: 1;
+        visibility: visible;
+    }
+
+    #menu-btn:checked ~ .menu-icon .navicon {
+        background: transparent;
+    }
+
+    #menu-btn:checked ~ .menu-icon .navicon:before {
+        transform: rotate(-45deg);
+        top: 0;
+        background: var(--background-color);
+    }
+
+    #menu-btn:checked ~ .menu-icon .navicon:after {
+        transform: rotate(45deg);
+        top: 0;
+        background: var(--background-color);
+    }
+
+    footer {
+        padding: 1rem 1rem;
+    }
+
+    footer .social-icons {
+        gap: 1.2rem;
+    }
+
+    footer .social-icons a {
+        font-size: 1.3rem;
+    }
+
+    footer .footer-content p {
+        font-size: 0.65rem;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .navbar{
+        padding: 1rem 1rem;
+    }
+
+}

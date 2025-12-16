@@ -1,0 +1,296 @@
+/* Import common styles */
+@import url('common.css');
+
+/* =========================================
+   CONTACT SECTION
+   ========================================= */
+.contact-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 85vh;
+    padding-top: 1rem;
+    padding-bottom: 0;
+    margin: 2rem;
+}
+
+.contact-section h2 {
+    font-size: 5rem;
+    text-align: center;
+    color: var(--text-color);
+    letter-spacing: 0.05em;
+}
+
+.contact-section .subtitle {
+    font-size: 1.5rem;
+    font-family: var(--font-tertiary);
+    text-align: center;
+    color: var(--text-color);
+    opacity: 0.8;
+    max-width: 1000px;
+    margin-bottom: 2rem;
+    line-height: 1;
+}
+
+.contact-section .group {
+    display: flex;
+    gap: 3rem;
+    max-width: 1400px;
+    width: 100%;
+    font-family: var(--font-secondary);
+    font-weight: 500;
+    align-items: stretch;
+    padding-bottom: 0;
+}
+
+/* Contact Information Box */
+.contact-section .group .text {
+    flex: 0.9;
+    background-color: #B6CEB4;
+    padding: 3rem;
+    border-radius: 24px;
+    color: white;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-section .group .text h3 {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: white;
+}
+
+
+.contact-section .group .text .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+/* Decorative circle element */
+.contact-section .group .text::after {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    bottom: -100px;
+    right: -100px;
+}
+
+.contact-section .group .text .social-media {
+    display: flex;
+    gap: 1rem;
+    margin-top: auto;
+    padding-top: 2rem;
+    position: relative;
+    z-index: 1;
+}
+
+.contact-section .group .text .social-media a {
+    color: white;
+    font-size: 2rem;
+    transition: opacity 0.3s ease;
+}
+
+.contact-section .group .text .social-media a:hover {
+    opacity: 0.7;
+}
+
+/* Form Box */
+.contact-section .group form {
+    flex: 1.1;
+    display: flex;
+    flex-direction: column;
+    background-color: #ffffff;
+    padding: 3rem;
+    border-radius: 24px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+}
+
+.contact-section .group form label {
+    font-size: 0.95rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+    color: var(--background-color);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: block;
+}
+
+.contact-section .group form input,
+.contact-section .group form textarea {
+    font-family: var(--font-secondary);
+    font-weight: 400;
+    font-size: 1.1rem;
+    color: var(--background-color);
+    border: none;
+    border-bottom: 2px solid #e0e0e0;
+    border-radius: 0;
+    background-color: transparent;
+    margin-bottom: 2rem;
+    padding: 0.75rem 0;
+    outline: none;
+    resize: none;
+    transition: border-color 0.3s ease;
+}
+
+.contact-section .group form input::placeholder,
+.contact-section .group form textarea::placeholder {
+    opacity: 0.5;
+}
+
+
+.contact-section .group form input:focus,
+.contact-section .group form textarea:focus {
+    border-bottom-color: #B6CEB4;
+}
+
+.contact-section .group form textarea {
+    min-height: 120px;
+    border-bottom: 2px solid #e0e0e0;
+}
+
+.contact-section .group form button {
+    font-family: var(--font-secondary);
+    font-size: 1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: white;
+    background-color: #B6CEB4;
+    border: none;
+    border-radius: 8px;
+    height: 3.5rem;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    align-self: flex-start;
+    padding: 0 1.5rem;
+}
+
+.contact-section .group form button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(182, 206, 180, 0.4);
+}
+
+@media (max-width: 1024px) {
+    .contact-section {
+        padding: 4rem 1rem 2rem;
+        min-height: calc(100vh - 100px);
+    }
+
+    .contact-section .group {
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .contact-section h2 {
+        font-size: 2.5rem;
+    }
+
+    .contact-section .group .text {
+        text-align: center;
+        font-size: 0.9rem;
+    }
+
+    .contact-section .group form input,
+    .contact-section .group form textarea {
+        font-size: 1.2rem;
+    }
+
+    .contact-section .group form button {
+        font-size: 1.2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-section {
+        padding: 2rem 0.1rem 0;
+        min-height: auto;
+    }
+
+    .contact-section h2 {
+        font-size: 2rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .contact-section .subtitle {
+        font-size: 0.95rem;
+        margin-bottom: 2rem;
+        padding: 0 0.1rem;
+    }
+
+    .contact-section .group {
+        flex-direction: column;
+        gap: 1.5rem;
+        width: 100%;
+    }
+
+    /* Contact Info Box */
+    .contact-section .group .text {
+        padding: 2rem 1.5rem;
+        border-radius: 16px;
+    }
+
+    .contact-section .group .text h3 {
+        font-size: 1.5rem;
+        margin-bottom: 0.75rem;
+    }
+
+    .contact-section .group .text p {
+        font-size: 0.9rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .contact-section .group .text .contact-item {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+
+    .contact-section .group .text .social-media {
+        padding-top: 1.5rem;
+        gap: 1.2rem;
+    }
+
+    .contact-section .group .text .social-media a {
+        font-size: 1.25rem;
+    }
+
+    /* Form Box */
+    .contact-section .group form {
+        padding: 2rem 1.5rem;
+        border-radius: 16px;
+    }
+
+    .contact-section .group form label {
+        font-size: 0.8rem;
+        margin-bottom: 0.4rem;
+    }
+
+    .contact-section .group form input,
+    .contact-section .group form textarea {
+        font-size: 0.8rem;
+        margin-bottom: 1.5rem;
+        padding: 0.6rem 0;
+    }
+
+    .contact-section .group form textarea {
+        min-height: 100px;
+    }
+
+    .contact-section .group form button {
+        font-size: 1rem;
+        height: 3rem;
+        width: 100%;
+        padding: 0 2rem;
+    }
+}
+
+
+
+
