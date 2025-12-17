@@ -346,6 +346,55 @@
 /* =========================================
    RESPONZIVNOST
    ========================================= */
+@media (max-width: 1024px) {
+    .hero-btn:hover {
+        background-color: transparent;
+        color: var(--text-color);
+        transform: none;
+        box-shadow: none;
+    }
+
+    .skills-section {
+        margin-bottom: 4rem;
+        padding: 0 6rem;
+    }
+
+    .photo-wrapper img {
+        filter: none !important;
+        transform: none !important;
+    }
+
+    .photo-wrapper .photo-border {
+        transform: none !important;
+    }
+
+    .photo-wrapper::before {
+        opacity: 0 !important;
+    }
+
+    .photo-wrapper:hover img {
+        filter: none !important;
+        transform: none !important;
+    }
+
+    .photo-wrapper:hover .photo-border {
+        transform: none !important;
+    }
+
+    .photo-wrapper:hover::before {
+        opacity: 0 !important;
+    }
+
+    .skill-pill:hover {
+        background: rgba(255, 255, 255, 0.9);
+        color: var(--color-dark-green);
+        border-color: rgba(150, 167, 141, 0.35);
+        transform: none;
+        box-shadow: none;
+    }
+}
+
+
 @media (max-width: 768px) {
     .hero-section {
         flex-direction: column;
@@ -404,13 +453,14 @@
     }
 
     .skills-section {
-        padding: 3.5rem var(--space-md) var(--space-xl);
+        padding: 3.5rem var(--space-md) var(--space-lg);
+        margin-bottom: 0;
     }
 
     .skills-section h2 {
         font-size: 2.2rem;
         letter-spacing: 0.08em;
-        margin-bottom: var(--space-lg);
+        margin-bottom: 0;
     }
 
     .skills-grid {
@@ -456,7 +506,8 @@
     }
 
     .hero-section .text h1 {
-        font-size: 1.25rem;
+        font-size: 1.5rem;
+        padding: var(--space-lg);
     }
 
     .smaller {

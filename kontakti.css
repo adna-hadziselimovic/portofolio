@@ -43,7 +43,7 @@
     padding-bottom: 0;
 }
 
-/* Contact Information Box */
+/* Kontakt informacije */
 .contact-section .group .text {
     flex: 0.9;
     background-color: var(--color-accent);
@@ -189,15 +189,15 @@
     }
 
     .contact-section h2 {
-        font-size: 2.5rem;
+        font-size: 3rem;
     }
 
     .contact-section .group .text {
-        text-align: center;
+        text-align: left;
         font-size: 0.9rem;
     }
 
-    .contact-section .group form input,
+        .contact-section .group form input,
     .contact-section .group form textarea {
         font-size: 1.2rem;
     }
@@ -232,13 +232,13 @@
 
     /* Contact Info Box */
     .contact-section .group .text {
-        padding: var(--space-lg) var(--space-md);
+        padding: var(--space-md) var(--space-md);
         border-radius: 16px;
     }
 
     .contact-section .group .text h3 {
-        font-size: 1.5rem;
-        margin-bottom: 0.75rem;
+        font-size: 1.25rem;
+        margin-bottom: 1rem;
     }
 
     .contact-section .group .text p {
@@ -258,6 +258,17 @@
 
     .contact-section .group .text .social-media a {
         font-size: 1.25rem;
+    }
+
+    .contact-section .group .text::after {
+        content: '';
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background-color: rgba(255, 255, 255, 0.1);
+        border-radius: 50%;
+        bottom: -50px;
+        right: -50px;
     }
 
     /* Form Box */
