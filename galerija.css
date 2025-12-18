@@ -22,7 +22,7 @@
     position: sticky;
     top: 0;
     text-align: center;
-    padding: 6rem var(--space-lg) var(--space-sm);
+    padding: 4rem var(--space-lg) var(--space-sm);
     background-color: var(--background-color);
 }
 
@@ -104,11 +104,11 @@
     }
 
     .trip-header h2 {
-        font-size: 1.75rem;
+        font-size: 3rem;
     }
 
     .trip-header h3 {
-        font-size: 1rem;
+        font-size: 1.75rem;
     }
 
     .photo-grid {
@@ -124,3 +124,14 @@
         height: 25vh;
     }
 }
+
+@media (max-width: 480px) {
+    .trip-header h2 {
+        font-size: 2rem;
+    }
+
+    .trip-header h3 {
+        font-size: 1.2rem;
+    }
+}
+

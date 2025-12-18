@@ -201,10 +201,10 @@ a {
 .nav-link {
     position: relative;
     font-family: var(--font-primary);
-    font-size: 1.8rem;
+    font-size: 2rem;
     text-transform: uppercase;
     display: inline-block;
-    height: 1.8rem;
+    height: 2rem;
     overflow: hidden;
 }
 
@@ -355,7 +355,7 @@ footer .social-icons {
    ========================================= */
 @media (max-width: 1024px) {
     .navbar .logo {
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 
     .navbar{
@@ -391,7 +391,7 @@ footer .social-icons {
     .nav-links .nav-link {
         width: auto;
         text-align: center;
-        font-size: 4rem;
+        font-size: 8rem;
         height: auto;
     }
 
@@ -428,6 +428,14 @@ footer .social-icons {
         background: var(--background-color);
     }
 
+    #menu-btn:checked ~ .back-to-home,
+    body:has(#menu-btn:checked) .back-to-home {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+
     .back-to-home {
         bottom: 20px;
         right: 20px;
@@ -457,7 +465,16 @@ footer .social-icons {
         padding: var(--space-sm) var(--space-sm);
     }
 
-    .back-to-home {
+    .navbar .logo {
+        font-size: 2rem;
+    }
+
+    .nav-links .nav-link {
+        font-size: 6rem;
+    }
+
+
+        .back-to-home {
         bottom: 15px;
         right: 15px;
         padding: 10px 10px;
@@ -466,7 +483,7 @@ footer .social-icons {
     }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 480px) {
     .back-to-home {
         bottom: 12px;
         right: 12px;

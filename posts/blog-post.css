@@ -335,7 +335,7 @@ body {
     }
 }
 
-@media (max-width: 420px) {
+@media (max-width: 480px) {
     .video-backdrop {
         padding: 0.5rem;
     }

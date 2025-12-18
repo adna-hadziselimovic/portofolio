@@ -130,7 +130,7 @@
         padding: 6rem 3rem;
     }
     .blog-page h1 {
-        font-size: 3.5rem;
+        font-size: 3rem;
         margin-bottom: var(--space-xl);
     }
 
@@ -161,3 +161,4 @@
         font-size: 1.75rem;
     }
 }
+
