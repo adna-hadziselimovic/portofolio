@@ -1,5 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
+/* početni layout stranice rađen po tutorijalu: https://youtu.be/Slxdo0Dqxlk?si=FBQXUjU7nOcGqj2i/*
+
 /* =========================================
    CSS VARIJABLE
    ========================================= */
@@ -67,6 +69,8 @@ body {
 main {
     flex: 1;
 }
+
+/* pozadinski efekat rađen po uzoru na https://codepen.io/AlvaroMontoro/pen/PjOZaY */
 
 .background-shapes {
     position: fixed;

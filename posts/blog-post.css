@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 
-/* Reset i osnove */
+/* Reset i body */
 * {
     margin: 0;
     padding: 0;
@@ -17,7 +17,7 @@ body {
 }
 
 /* =========================================
-   CSS-ONLY PAGE LOADER
+   PAGE LOADER
    ========================================= */
 .page-loader {
     position: fixed;
@@ -59,14 +59,13 @@ body {
 }
 
 /* =========================================
-   VIDEO PLAYER SECTION - CSS ONLY
+   VIDEO PLAYER
    ========================================= */
 .video-section {
     padding-top: 4rem;
     text-align: center;
 }
 
-/* Toggle Button */
 .video-toggle-btn {
     display: inline-flex;
     align-items: center;
@@ -97,7 +96,6 @@ body {
     stroke: currentColor;
 }
 
-/* Video Container (Hidden by default) */
 .video-container {
     display: none;
     position: fixed;
@@ -148,7 +146,6 @@ body {
     transform: scale(1);
 }
 
-/* Close Button */
 .video-close-btn {
     position: absolute;
     top: 1rem;
@@ -178,14 +175,13 @@ body {
     font-size: 1.25rem;
 }
 
-/* YouTube iframe */
 .video-wrapper iframe {
     width: 100%;
     height: 100%;
     border: none;
 }
 
-/* Blog post container */
+
 .blog-post {
     max-width: 680px;
     margin: 0 auto;
@@ -279,7 +275,10 @@ body {
     border-top: 1px solid #B6CEB4;
 }
 
-/* Remove duplicate @media (max-width: 768px) and replace with: */
+
+/* =========================================
+   RESPONZIVNOST
+   ========================================= */
 @media (max-width: 768px) {
     .video-backdrop {
         padding: 1rem;

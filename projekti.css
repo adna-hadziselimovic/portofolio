@@ -453,7 +453,6 @@
         font-size: 0.95rem;
     }
 
-    /* Projects Section */
     .projects-section {
         padding: 2.5rem var(--space-md);
     }
@@ -463,12 +462,10 @@
         margin-bottom: var(--space-md);
     }
 
-    /* Projects Grid */
     .projects-grid {
         gap: 1.25rem;
     }
 
-    /* Project Cards */
     .project-card {
         border-radius: var(--radius-small);
     }
